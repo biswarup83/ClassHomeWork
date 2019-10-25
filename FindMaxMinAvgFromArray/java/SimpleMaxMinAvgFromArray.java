@@ -1,4 +1,3 @@
-
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
@@ -6,41 +5,42 @@ import java.util.Scanner;
  * @author biswarup
 	
 	Program to find the Minimum, Maximum and Average of array of integers 
- 	without using JAVA Collections and Array class methods
  	
  	How to run this code ?
  	1. Compile the JAVA code in command prompt, which will create .class file (compiled version of the java code)
- 	javac FindMaxMinAvgOfNumArrWithoutArraySort.java
+ 	javac SimpleMaxMinAvgFromArray.java
  	2. Run the code by running as below:
- 	java FindMaxMinAvgOfNumArrWithoutArraySort
- 	
-	*********************** ENTER INPUTS *****************************
+ 	java SimpleMaxMinAvgFromArray
+	 	
+	********************* ENTER INPUTS *****************************
 	Enter your name::	bis
-	Enter numbers you want to check::	4
-	Enter number1::	2.32
-	Enter number2::	1.1
-	Enter number3::	1.01
-	Enter number4::	2.34
+	Enter numbers you want to check::	6
+	Enter number1::	2.3
+	Enter number2::	4.5
+	Enter number3::	6.1
+	Enter number4::	1.2
+	Enter number5::	6.3
+	Enter number6::	1.1
 	
 	
 	BIS entered::	
-	2.32	1.1	1.01	2.34	
+	2.3	4.5	6.1	1.2	6.3	1.1	
 	
 	***********************************************************************
-	********************* SEE RESULTS **************************
+	********************* SEE RESULTS *************************************
 	
-	Numbers after sorting::	
-	1.01	1.1	2.32	2.34	
-	
-	Minimum of the numbers::	1.01
-	Maximum of the numbers::	2.34
-	Average of the Numbers::	1.69
+	Minimum of the numbers::	1.1
+	Maximum of the numbers::	6.3
+	Average of the Numbers::	3.58
 	
 	************************************************************************
+
  **/
-public class FindMaxMinAvgOfNumArrWithoutArraySort {
+
+public class SimpleMaxMinAvgFromArray {
 
 	public static void main(String[] args) {
+		// TODO Auto-generated method stub
 		// Gathering inputs
 		System.out.println("********************* ENTER INPUTS *****************************");
 		Scanner scanner = new Scanner(System.in);
@@ -65,26 +65,58 @@ public class FindMaxMinAvgOfNumArrWithoutArraySort {
 		System.out.println("\n");
 
 		System.out.println("***********************************************************************");
-		double[] sortedarrayOfNums = applyBubbleSorting(arrayOfNums);  // apply bubble sorting which returns arrays sorted ascending
-
+		
 		// Showing results in the console
 		System.out.println("********************* SEE RESULTS *************************************");
 		System.out.println();
-
-		System.out.println("Numbers after sorting::\t");
-		printArray(arrayOfNums);
-		System.out.println();
 		
-		System.out.println();
-		System.out.println("Minimum of the numbers::\t" + sortedarrayOfNums[0]); // First element of the sorted array should be the minimum
+		System.out.println("Minimum of the numbers::\t" + findMin(arrayOfNums)); // First element of the sorted array should be the minimum
 
-		System.out.println("Maximum of the numbers::\t" + sortedarrayOfNums[sortedarrayOfNums.length - 1]); // Last element of the sorted array would be the maximum
+		System.out.println("Maximum of the numbers::\t" + findMax(arrayOfNums)); // Last element of the sorted array would be the maximum
 		
 		DecimalFormat format = new DecimalFormat("##.00");
 		System.out.println("Average of the Numbers::\t" + format.format(calculateAverage(arrayOfNums)));
 		System.out.println();
 		System.out.println("************************************************************************");
 
+		
+	}
+	
+	
+	/**
+	 * 
+	 * @param array of double
+	 * @return array of double
+	 * 
+	 * Performs Bubble Sorting
+	 */
+	private static double findMax(double[] arr) {
+		double tmp = arr[0];
+		for (int i = 1; i < arr.length; i++) { // First loop to loop through the input array from second element i
+			if (arr[i] > tmp) { 							
+				tmp = arr[i];
+			}
+		}
+		return tmp;
+		
+	}
+	
+	/**
+	 * 
+	 * @param array of double
+	 * @return array of double
+	 * 
+	 * Performs Bubble Sorting
+	 */
+	private static double findMin(double[] arr) {
+		double tmp = arr[0];
+		for (int i = 1; i < arr.length; i++) { // First loop to loop through the input array from second element i
+			if (arr[i] < tmp) { 							
+				tmp = arr[i];
+			}
+		}
+		return tmp;
+		
 	}
 	
 	/**
@@ -107,30 +139,6 @@ public class FindMaxMinAvgOfNumArrWithoutArraySort {
 	    return sum / numbers.length;
 	}
 	
-	/**
-	 * 
-	 * @param array of double
-	 * @return array of double
-	 * 
-	 * Performs Bubble Sorting
-	 */
-	private static double[] applyBubbleSorting(double[] arr) {
-		
-	    for (int i = 0; i < arr.length; i++) {			// First loop to loop through the input array from first element i
-	        for (int j = i + 1; j < arr.length; j++) {	// Second loop start from i + 1
-	            double tmp = 0;
-	            if (arr[i] > arr[j]) {					// If the next element i + 1 is > previous element i then exchange elements using a temporary variable
-	                tmp = arr[i];
-	                arr[i] = arr[j];
-	                arr[j] = tmp;
-	            }
-	        }
-	    }
-		
-		return arr;
-		
-	}
-	
 	
 	/**
 	 * 
@@ -144,6 +152,5 @@ public class FindMaxMinAvgOfNumArrWithoutArraySort {
 			System.out.print(arr[i] + "\t");
 		}
 	}
-
 
 }
