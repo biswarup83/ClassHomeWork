@@ -1,15 +1,16 @@
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 /**
  * @author biswarup
 	
-	Program to find the Minimum, Maximum and Average without array
+	Program to find the Minimum, Maximum without array
  	
  	How to run this code ?
  	1. Compile the JAVA code in command prompt, which will create .class file (compiled version of the java code)
- 	javac SimpleMaxMinWithoutArray.java
+ 	javac SimpleMaxMinAvgWithoutArray.java
  	2. Run the code by running as below:
- 	java SimpleMaxMinWithoutArray
+ 	java SimpleMaxMinAvgWithoutArray
 	 	
 	********************* ENTER INPUTS *****************************
 	Enter your name::	bis
@@ -31,16 +32,16 @@ import java.util.Scanner;
 
  **/
 
-public class SimpleMaxMinWithoutArray {
+public class SimpleMaxMinAvgWithoutArray {
 
 	public static void main(String[] args) {
 		// Gathering inputs
 		System.out.println("********************* ENTER INPUTS *****************************");
 		Scanner scanner = new Scanner(System.in);
-		System.out.print("Enter your name::\t");
+		System.out.println("Enter your name::\t");
 		String name = scanner.next();		
 		
-		System.out.print("Enter numbers you want to check::\t");
+		System.out.println("Enter numbers you want to check::\t");
 		int totalNumbers = scanner.nextInt();
 
 		System.out.print("Enter number" + 1 + "::\t");
@@ -48,8 +49,10 @@ public class SimpleMaxMinWithoutArray {
 		
 		double minNum = numberEntered;
 		double maxNum = numberEntered;
-
-		for (int i = 1; i < totalNumbers; i++) {     // looping over from 1st entry to the (totalNumber - 1)
+		double sumNum = numberEntered;
+		
+		// For loop starting from 2nd entry to the last which is (totalNumber - 1)
+		for (int i = 1; i < totalNumbers; i++) {     
 			System.out.print("Enter number" + (i+1) + "::\t");
 			numberEntered = scanner.nextDouble();
 			
@@ -57,6 +60,8 @@ public class SimpleMaxMinWithoutArray {
 				maxNum = numberEntered;
 			if(numberEntered < minNum)
 				minNum = numberEntered;
+			
+			sumNum = sumNum + numberEntered;
 		}
 		scanner.close();
 		System.out.println("\n");
@@ -68,6 +73,9 @@ public class SimpleMaxMinWithoutArray {
 		System.out.println("Minimum of the numbers "+ name +" entered::\t" + minNum); 
 
 		System.out.println("Maximum of the numbers "+ name +" entered::\t" + maxNum); 
+		
+		DecimalFormat format = new DecimalFormat("##.00");
+		System.out.println("Average of the numbers "+ name +" entered::\t" + format.format(sumNum/totalNumbers)); 
 		
 		System.out.println("************************************************************************");
 
