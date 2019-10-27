@@ -40,15 +40,13 @@ import java.util.Scanner;
 public class SimpleMaxMinAvgFromArray {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		// Gathering inputs
 		System.out.println("********************* ENTER INPUTS *****************************");
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("Enter your name::\t");
 		String name = scanner.next();		
-		Integer arraySize = 5; // default to 3 numbers
 		System.out.print("Enter numbers you want to check::\t");
-		arraySize = scanner.nextInt();
+		int arraySize = scanner.nextInt();
 		
 
 		double[] arrayOfNums = new double[arraySize];

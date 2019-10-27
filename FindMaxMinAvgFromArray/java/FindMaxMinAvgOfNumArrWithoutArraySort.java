@@ -6,7 +6,7 @@ import java.util.Scanner;
  * @author biswarup
 	
 	Program to find the Minimum, Maximum and Average of array of integers 
- 	without using JAVA Collections and Array class methods
+ 	using JAVA Collections and Array class methods
  	
  	How to run this code ?
  	1. Compile the JAVA code in command prompt, which will create .class file (compiled version of the java code)
@@ -46,9 +46,8 @@ public class FindMaxMinAvgOfNumArrWithoutArraySort {
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("Enter your name::\t");
 		String name = scanner.next();		
-		Integer arraySize = 5; // default to 3 numbers
 		System.out.print("Enter numbers you want to check::\t");
-		arraySize = scanner.nextInt();
+		int arraySize = scanner.nextInt();
 		
 
 		double[] arrayOfNums = new double[arraySize];

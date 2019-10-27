@@ -50,9 +50,8 @@ public class FindMaxMinAvgOfNumArrWithArraySort {
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("Enter your name::\t");
 		String name = scanner.next();		
-		Integer arraySize = 5; // default to 3 numbers
 		System.out.print("Enter numbers you want to check::\t");
-		arraySize = scanner.nextInt();
+		int arraySize = scanner.nextInt();
 		
 
 		Double[] arrayOfNums = new Double[arraySize];
