@@ -89,7 +89,7 @@ int main() {
     double numberEntered;
 
     cout << "********************* ENTER INPUTS *****************************\n";
-	cout << "Enter your name::\t\n";
+	cout << "Enter your first name::\t\n";
 	cin >> name;		
 	cout << "\n";
 
