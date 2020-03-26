@@ -7,7 +7,7 @@ public class FindAtomicWeight {
 
 	public static void main(String[] args) {
 
-		/* ********************* SCAN ATMOIC NUMBER INPUT FRO< USER *********/
+		/* ********************* SCAN ATMOIC NUMBER INPUT FROM USER *********/
 
 		int a = 0;
 		Scanner sc = new Scanner(System.in);
@@ -49,6 +49,8 @@ public class FindAtomicWeight {
 						System.out.println("Group:: "+tokens[9]);
 						System.out.println("ElectronConfiguration:: "+tokens[10]);
 						System.out.println("IonizationEnergy(eV):: "+tokens[11]);
+						
+						break;
 					}
 				}
 				// read next line
@@ -59,7 +61,9 @@ public class FindAtomicWeight {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		//System.out.println(line_number);
 
 	}
 
 }
+
