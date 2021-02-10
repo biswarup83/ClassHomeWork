@@ -1,0 +1,46 @@
+D:\git\ClassHomeWork\BusTicketFareCalculate\java>javac BusTicketDispenserUsingSimpleArray.java
+
+D:\git\ClassHomeWork\BusTicketFareCalculate\java>java BusTicketDispenserUsingSimpleArray
+Enter how many passengers boarding (enter number greater than zero):
+45
+******************************
+Enter password to complete boarding and generate summary OR press any key and enter to continue as new passenger:
+
+Enter number of km : 23
+
+############ Ticket Reciept ########
+Kilometers travelling: 23.0
+Fare charged: 108.5
+Safe travel. Thank you!
+#####################################
+
+******************************
+Enter password to complete boarding and generate summary OR press any key and enter to continue as new passenger:
+
+Enter number of km : 12
+
+############ Ticket Reciept ########
+Kilometers travelling: 12.0
+Fare charged: 59.0
+Safe travel. Thank you!
+#####################################
+
+******************************
+Enter password to complete boarding and generate summary OR press any key and enter to continue as new passenger:
+
+Enter number of km : 45
+
+############ Ticket Reciept ########
+Kilometers travelling: 45.0
+Fare charged: 190.0
+Safe travel. Thank you!
+#####################################
+
+******************************
+Enter password to complete boarding and generate summary OR press any key and enter to continue as new passenger:
+X12345
+
+################# Travel Summary #########################
+Total Fare Received: 357.5
+Total Number of Passengers Travelled: 3
+###########################################################
