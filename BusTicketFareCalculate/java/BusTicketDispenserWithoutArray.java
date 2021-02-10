@@ -111,9 +111,9 @@ public class BusTicketDispenserWithoutArray {
 		Double fare_charged = null;
 
 		// ##### Logic for calculation of fare ####
-		if (distance_travelling < 10)
+		if (distance_travelling <= 10)
 			fare_charged = 50.0;
-		if (distance_travelling >= 10 && distance_travelling <= 25)
+		if (distance_travelling > 10 && distance_travelling <= 25)
 			fare_charged = 50.0 + 4.5 * (distance_travelling - 10);
 		if (distance_travelling > 25)
 			fare_charged = 50.0 + 4.0 * (distance_travelling - 10);
