@@ -19,23 +19,18 @@ Write a program to perform the above task.[ Hints: perform the task based on use
 
 Solution analysis:
 
-- First the password for summary generator is loaded from config.properties file. 
+- This solution is without any array.
 
-- In this solution simple array is used. First user is asked how many passengers are going to travel. And based of that 
-array is defined. A number format check is done considering user can enter any number.
-
-- Once array is initialized For loop iterates over the array to gather from each passengers where passenger enters how many
-kms they are going to travel.
+- passenger enters how many kms they are going to travel.
 
 - Considering a user can enter any letters when asked to enter how many kms he/she wants to travel, the system would fail if 
 an user enters non-numeric letter. So the function isNumeric uses regular expressions to check if the string entered by the user 
 is a number or not. If not then it asks the user to re-enter. 
 
 - Once the user enter the number of kms he/she wants to travel the getFare() function takes care of the calculations of how much fare
-would be charged and returns it which then is stored in the arrayList all_fares.
+would be charged and returns it.
 
-- Now when the travel is completed the driver/conductor puts the password (in this case X12345) and the program them iterates 
-over the arrayList all_fares to generate sum of all fares and the total number of passengers traveled. 
+- Now when the travel is completed the driver/conductor enters "end" to generate sum of all fares and the total number of passengers traveled. 
 
 
 */
